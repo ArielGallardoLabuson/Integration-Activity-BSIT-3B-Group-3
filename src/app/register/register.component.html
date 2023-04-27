@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="./register.component.css">
+
+<div class="container">
+    <h1 class="text-center">Register</h1>
+
+    <div class="row">
+        <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" class="form-horizontal">
+            <div class="form-group">
+                <label for="fullname" class="col-sm-2 control-label">Full Name</label>
+                <div class="col-sm-10">
+                    <input type="text" name="fullname" formControlName="fullname" autocomplete="off"
+                        placeholder="Enter fullname ex. Juan Santos Dela Cruz" required class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" name="email" formControlName="email" autocomplete="off"
+                        placeholder="Enter email ex. juandelacruz18@gmail.com" required class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" name="password" formControlName="password" autocomplete="off"
+                        placeholder="Enter password" required class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" name="submit" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
